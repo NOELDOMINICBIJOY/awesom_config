@@ -331,7 +331,6 @@ function theme.at_screen_connect(s)
         { -- Left widgets
             layout = wibox.layout.fixed.horizontal,
             first,
-            s.mytag,
             spr_small,
             s.mylayoutbox,
             spr_small,
@@ -343,7 +342,15 @@ function theme.at_screen_connect(s)
             wibox.widget.systray(),
             --theme.mail.widget,
             --bat.widget,
-            spr_right,
+            spr_bottom_right,
+            netdown_icon,
+            networkwidget,
+            netup_icon,
+            bottom_bar,
+            cpu_icon,
+            cpuwidget,
+            bottom_bar,
+		spr_right,
             musicwidget,
             bar,
             prev_icon,
@@ -356,6 +363,13 @@ function theme.at_screen_connect(s)
             spr_very_small,
             volumewidget,
             spr_left,
+            bar,
+			bottom_bar,
+            clock_icon,
+            clockwidget,
+            calendar_icon,
+            calendarwidget,
+	 
         },
     }
 
@@ -368,25 +382,16 @@ function theme.at_screen_connect(s)
         layout = wibox.layout.align.horizontal,
         { -- Left widgets
             layout = wibox.layout.fixed.horizontal,
-            mylauncher,
+            
+			mylauncher,
+
+            s.mytag,
         },
         s.mytasklist, -- Middle widget
         { -- Right widgets
             layout = wibox.layout.fixed.horizontal,
-            spr_bottom_right,
-            netdown_icon,
-            networkwidget,
-            netup_icon,
-            bottom_bar,
-            cpu_icon,
-            cpuwidget,
-            bottom_bar,
-            calendar_icon,
-            calendarwidget,
-            bottom_bar,
-            clock_icon,
-            clockwidget,
-        },
+
+       },
     }
 end
 
